@@ -1,1 +1,12 @@
-
+{
+  "name": "pierce-parcel-check",
+  "version": "1.0.0",
+  "description": "Playwright scraper for Pierce County parcel summary",
+  "main": "scrape-one.js",
+  "scripts": {
+    "start": "node scrape-one.js"
+  },
+  "dependencies": {
+    "playwright": "^1.53.0"
+  }
+}
