@@ -1,9 +1,7 @@
 {
   "name": "tpic-parcel-monitor",
   "version": "1.0.0",
-  "type": "module",
   "dependencies": {
-    "playwright": "^1.40.0",
-    "node-fetch": "^3.3.2"
+    "playwright": "^1.53.0"
   }
 }
