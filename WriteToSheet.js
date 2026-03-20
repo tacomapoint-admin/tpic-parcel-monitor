@@ -1,9 +1,7 @@
-
 const fs = require('fs');
 const fetch = require('node-fetch');
 
 const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwXbmLZGEV8Ffjwx4l2_-NjWCffCzJ39hmlNLbX1KU4vkjYU1o-jZ8b2VZiS1ZWx-2hzQ/exec';
-
 const INPUT_FILE = 'results.json';
 
 async function main() {
