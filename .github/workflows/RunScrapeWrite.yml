@@ -1,5 +1,4 @@
-
-name: Run Scrape + Write Pipeline
+name: Run Scrape + Write
 
 on:
   workflow_dispatch:
@@ -9,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -31,3 +30,6 @@ jobs:
         with:
           name: scrape-results
           path: results.json
+
+      - name: Send to Google Sheets
+        run: node WriteToSheet.js
