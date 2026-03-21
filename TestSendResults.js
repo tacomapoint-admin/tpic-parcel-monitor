@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxRXToTO9xqoOgC8pyskMw8LdYFLkn1DXglqDBeDPvS_Iv7jqlENtbv-Xj8eCTdJNmENw/exec";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbySRKe4j4kmRrqDvXTbfNp8NNRYUWtyPGeC-xwbVWO5mbM-U9zJDsCLVxjhSEOWl4xQ5g/exec";
 
 async function sendJson() {
   try {
