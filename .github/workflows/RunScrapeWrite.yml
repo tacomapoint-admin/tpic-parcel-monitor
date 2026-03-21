@@ -19,5 +19,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Test Send to Google Sheets
-        run: node TestSendResults.js
+      - name: Send to Google Sheets
+        run: node WriteToSheet.js
