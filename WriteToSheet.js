@@ -20,13 +20,10 @@ async function main() {
     return;
   }
 
-  const runDate = new Date().toISOString();
-
   const rows = data.map(r => ({
-    RunDate: runDate,
-    ParcelNumber: r.parcelNumber || '',
-    SiteAddress: r.siteAddress || '',
-    TaxpayerName: r.taxpayerName || ''
+    parcelNumber: r.parcelNumber || '',
+    siteAddress: r.siteAddress || '',
+    taxpayerName: r.taxpayerName || ''
   }));
 
   console.log(`Sending ${rows.length} rows to Google Sheets...`);
@@ -41,6 +38,7 @@ async function main() {
 
   const text = await response.text();
 
+  console.log('HTTP Status:', response.status);
   console.log('Webhook response:');
   console.log(text);
 }
