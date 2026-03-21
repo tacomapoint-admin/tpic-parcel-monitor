@@ -1,10 +1,10 @@
-name: Test Send Existing JSON
+name: Run Scrape + Write
 
 on:
   workflow_dispatch:
 
 jobs:
-  send-json:
+  scrape:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,6 +18,18 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run scraper
+        run: node Scrape325_Write.js
+
+      - name: Upload results.json
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-results
+          path: results.json
 
       - name: Send to Google Sheets
         run: node WriteToSheet.js
